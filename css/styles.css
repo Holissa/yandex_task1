@@ -1,8 +1,12 @@
+body {
+    margin: 0;
+}
+
 .scoreboard {
-    margin-top: 5px;
+    margin-top: 45px;
     border: solid 1px #DDEEEE;
     border-collapse: collapse;
-    /*border-spacing: 0;*/
+    border-spacing: 0;
     width: 100%;
     margin-left: 0px;
 
@@ -12,13 +16,13 @@
 /*tr:nth-child(odd)           {background-color:white;}*/
 
 .scoreboard thead th {
-    /*background-color: #DDEFEF;*/
+    background-color: #DDEFEF;
     background-color: deepskyblue;
     color: white;
 
     border: solid 1px #DDEEEE;
-    /*color: #336B6B;*/
-    /*color: goldenrod;*/
+    color: #336B6B;
+    color: goldenrod;
     padding: 10px;
     text-align: left;
     text-shadow: 1px 1px 1px #fff;
@@ -53,8 +57,8 @@
 }
 
 .scoreboard-highlight-all tbody td:hover::before {
-    /*background-color: #CCE7E7;*/
-    /*background-color:lightgray ;*/
+    background-color: #CCE7E7;
+    background-color: lightgray;
     background-color: #ffa;
     content: '\00a0';
     height: 100%;
@@ -66,8 +70,8 @@
 }
 
 .scoreboard-highlight-all tbody td:hover::after {
-    /*background-color: #CCE7E7;*/
-    /*background-color:lightgray ;*/
+    background-color: #CCE7E7;
+    background-color: lightgray;
     background-color: #ffa;
     content: '\00a0';
     height: 10000px;
@@ -78,4 +82,27 @@
     z-index: -1;
 }
 
+.header {
+    /*background-color: #ccc;*/
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+}
 
+.firstLayer {
+    background-color: #fff;
+    position: relative;
+    height: 100px;
+}
+
+.firstLayer .tittle {
+    font-size: 36px;
+}
+
+.firstLayer .header {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    top: auto;
+}
