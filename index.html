@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
 <!--<div class="header">Header</div>-->
+<span class="tittle">Табло рейсов</span><br>
+<input type="checkbox" id="plane_arrival"/>
+<!--<label for="plane_arrival" id="expand-btn">Прилет</label>-->
+<label for="plane_arrival">Прилет</label>
+<input type="checkbox" id="plane_sortie" />
+<label for="plane_sortie">Вылет</label>
+
 <div class="header">
     <table class="scoreboard">
         <thead>
@@ -27,19 +35,17 @@
     </table>
 </div>
 <div class="firstLayer">
-    <span class="tittle">Табло рейсов</span>
+    <!--<span class="tittle">Табло рейсов</span>-->
 
-    <div style="float: right;">
-        <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox1" value="option1"> Прилет
-        </label>
-        <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox2" value="option2"> Вылет
-        </label>
-    </div>
+    <!--<div style="float: right;">-->
+        <!--<input type="checkbox" id="isexpanded" />-->
+        <!--<label class="checkbox-inline">-->
+            <!--<input type="checkbox" id="inlineCheckbox2" value="option2"> Вылет-->
+        <!--</label>-->
+    <!--</div>-->
 
     <!--<div class="header">Header</div>-->
-    <div class="header">
+    <div class="header" style="bottom: -40px;">
         <table class="scoreboard">
             <thead>
 
@@ -47,7 +53,7 @@
 
                 <th>Тип рейса</th>
                 <th>Номер рейса</th>
-                <th>Авиакомпания</th>
+                <th class="hide_airline">Авиакомпания</th>
                 <th>Логотип авиакомпании</th>
                 <th>Тип воздушного судна</th>
                 <th>Аэропорт назначения</th>
@@ -78,25 +84,83 @@
     <!--</tr>-->
     <!--</thead>-->
     <tbody>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
+
+    <tr class="greyLine arrival_hidden"></tr>
+    <tr class="arrival_hidden">
+        <td><a href="#modalWindow"><div class="pic_sortie"></div></a> </td>
+        <td> <a href="#modalWindow">ЮТ 524</a></td>
+        <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
+        <td><a href="#modalWindow">логотип авиакомпании</a></td>
+        <td><a href="#modalWindow">тип воздушного судна</a></td>
+        <td><a href="#modalWindow">Анапа (Витязево)</a></td>
+        <td><a href="#modalWindow">23:00
+            14.07.2015</a>
         </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
+        <td><a href="#modalWindow">Прилетел в 23:02. Идёт выдача багажа.Лента А06</a></td>
+        <td><a href="#modalWindow">примечание</a></td>
+    </tr>
+
+    <tr class="sortie_hidden">
+        <td><a href="#modalWindow"><div class="pic_arrival"></div></a></td>
+        <td><a href="#modalWindow">УН 041</a></td>
+        <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
+        <td><a href="#modalWindow">логотип авиакомпании</a></td>
+        <td><a href="#modalWindow">тип воздушного судна</a></td>
+        <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
+        <td><a href="#modalWindow">23:10
+            14.07.2015</a>
+        </td>
+        <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А06</a></td>
+        <td><a href="#modalWindow">примечание</a></td>
+    </tr>
+    <tr class="greyLine sortie_hidden"></tr>
+
+    <tr class="sortie_hidden">
+        <td><a href="#modalWindow"><div class="pic_arrival"></div></a></td>
+        <td><a href="#modalWindow">УН 041</a></td>
+        <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
+        <td><a href="#modalWindow">логотип авиакомпании</a></td>
+        <td><a href="#modalWindow">тип воздушного судна</a></td>
+        <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
+        <td><a href="#modalWindow">23:10
+            14.07.2015</a>
+        </td>
+        <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А06</a></td>
+        <td><a href="#modalWindow">примечание</a></td>
+    </tr>
+
+    <tr class="arrival_hidden">
+        <td><a href="#modalWindow"><div class="pic_sortie"></div></a></td>
+        <td><a href="#modalWindow">УН 041</a></td>
+        <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
+        <td><a href="#modalWindow">логотип авиакомпании</a></td>
+        <td><a href="#modalWindow">тип воздушного судна</a></td>
+        <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
+        <td><a href="#modalWindow">23:10
+            14.07.2015</a>
+        </td>
+        <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А06</a></td>
+        <td><a href="#modalWindow">примечание</a></td>
+    </tr>
+    <tr class="greyLine sortie_hidden"></tr>
+    <tr class="sortie_hidden">
+        <td><a href="#modalWindow"><div class="pic_arrival"></div></a></td>
+        <td><a href="#modalWindow">ЮТ 524</a></td>
+        <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
+        <td><a href="#modalWindow">логотип авиакомпании</a></td>
+        <td><a href="#modalWindow">тип воздушного судна</a></td>
+        <td><a href="#modalWindow">Анапа (Витязево)</a></td>
+        <td><a href="#modalWindow">23:00
+            14.07.2015</a>
+        </td>
+        <td><a href="#modalWindow">Прилетел в 23:02. Идёт выдача багажа.Лента А06</a></td>
+        <td><a href="#modalWindow">примечание</a></td>
     </tr>
 
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -111,7 +175,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -125,121 +189,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td>Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td>Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td>Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td>Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td>Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -253,7 +203,7 @@
     <tr>
         <td>тип рейса</td>
         <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
+        <td class="hide_airline">ЮТэйр</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Анапа (Витязево)</td>
@@ -267,7 +217,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -282,7 +232,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -296,7 +246,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -310,7 +260,7 @@
     <tr>
         <td>тип рейса</td>
         <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
+        <td class="hide_airline">ЮТэйр</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Анапа (Витязево)</td>
@@ -324,7 +274,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -339,7 +289,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -353,7 +303,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -367,7 +317,7 @@
     <tr>
         <td>тип рейса</td>
         <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
+        <td class="hide_airline">ЮТэйр</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Анапа (Витязево)</td>
@@ -381,7 +331,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -396,7 +346,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -410,7 +360,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -424,7 +374,7 @@
     <tr>
         <td>тип рейса</td>
         <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
+        <td class="hide_airline">ЮТэйр</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Анапа (Витязево)</td>
@@ -438,7 +388,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -453,7 +403,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -467,7 +417,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -481,7 +431,7 @@
     <tr>
         <td>тип рейса</td>
         <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
+        <td class="hide_airline">ЮТэйр</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Анапа (Витязево)</td>
@@ -495,7 +445,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -510,7 +460,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -524,7 +474,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -538,7 +488,7 @@
     <tr>
         <td>тип рейса</td>
         <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
+        <td class="hide_airline">ЮТэйр</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Анапа (Витязево)</td>
@@ -552,7 +502,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -567,7 +517,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -581,7 +531,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -595,7 +545,7 @@
     <tr>
         <td>тип рейса</td>
         <td>ЮТ 524</td>
-        <td>ЮТэйр</td>
+        <td class="hide_airline">ЮТэйр</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Анапа (Витязево)</td>
@@ -609,7 +559,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -624,7 +574,7 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -638,7 +588,64 @@
     <tr>
         <td>тип рейса</td>
         <td>УН 041</td>
-        <td>Трансаэро</td>
+        <td class="hide_airline">Трансаэро</td>
+        <td>логотип авиакомпании</td>
+        <td>тип воздушного судна</td>
+        <td>Санкт-Петербург (Пулково)</td>
+        <td>23:10
+            14.07.2015
+        </td>
+        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
+        <td>примечание</td>
+    </tr>
+    <tr class="greyLine"></tr>
+    <tr>
+        <td>тип рейса</td>
+        <td>ЮТ 524</td>
+        <td class="hide_airline">ЮТэйр</td>
+        <td>логотип авиакомпании</td>
+        <td>тип воздушного судна</td>
+        <td>Анапа (Витязево)</td>
+        <td>23:00
+            14.07.2015
+        </td>
+        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
+        <td>примечание</td>
+    </tr>
+
+    <tr>
+        <td>тип рейса</td>
+        <td>УН 041</td>
+        <td class="hide_airline">Трансаэро</td>
+        <td>логотип авиакомпании</td>
+        <td>тип воздушного судна</td>
+        <td>Санкт-Петербург (Пулково)</td>
+        <td>23:10
+            14.07.2015
+        </td>
+        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
+        <td>примечание</td>
+    </tr>
+    <tr class="greyLine"></tr>
+
+    <tr>
+        <td>тип рейса</td>
+        <td>УН 041</td>
+        <td class="hide_airline">Трансаэро</td>
+        <td>логотип авиакомпании</td>
+        <td>тип воздушного судна</td>
+        <td>Санкт-Петербург (Пулково)</td>
+        <td>23:10
+            14.07.2015
+        </td>
+        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
+        <td>примечание</td>
+    </tr>
+
+    <tr>
+        <td>тип рейса</td>
+        <td>УН 041</td>
+        <td class="hide_airline">Трансаэро</td>
         <td>логотип авиакомпании</td>
         <td>тип воздушного судна</td>
         <td>Санкт-Петербург (Пулково)</td>
@@ -652,6 +659,13 @@
 
 </table>
 
-
+<div id="modalWindow" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Информация о рейсе</h2>
+        <p>Тип рейса</p>
+        <p>Номер рейса</p>
+    </div>
+</div>
 </body>
 </html>

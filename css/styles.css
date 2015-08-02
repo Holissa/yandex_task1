@@ -1,5 +1,6 @@
 body {
     margin: 0;
+
 }
 
 .scoreboard {
@@ -7,8 +8,11 @@ body {
     border: solid 1px #DDEEEE;
     border-collapse: collapse;
     border-spacing: 0;
-    width: 100%;
-    margin-left: 0px;
+    /*width: 100%;*/
+    width: 1200px;
+    /*margin-left: 0px;*/
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -41,7 +45,8 @@ body {
 .greyLine {
     position: absolute;
     z-index: -2;
-    width: 100%;
+    /*width: 100%;*/
+    width: 1200px;
     height: 5%;
     background-color: gainsboro;
 }
@@ -86,8 +91,9 @@ body {
     /*background-color: #ccc;*/
     width: 100%;
     position: fixed;
-    top: 0;
-    bottom: auto;
+    /*top: 0;*/
+    /*bottom: auto;*/
+
 }
 
 .firstLayer {
@@ -96,13 +102,89 @@ body {
     height: 100px;
 }
 
-.firstLayer .tittle {
+/*.firstLayer .tittle {*/
+    /*font-size: 36px;*/
+/*}*/
+.tittle {
     font-size: 36px;
 }
-
 .firstLayer .header {
     position: absolute;
-    bottom: 0;
+    /*bottom: 0;*/
     z-index: 2;
-    top: auto;
+    /*top: auto;*/
+
+}
+
+@media all and (max-width: 900px) {
+    .hide_airline {display: none;}
+}
+
+#plane_arrival:checked ~ * tr.arrival_hidden {
+    display: none;
+
+}
+
+#plane_sortie:checked ~ * tr.sortie_hidden {
+    display: none;
+
+}
+.pic_sortie, .pic_arrival {
+    width: 20px;
+    height: 20px;
+}
+.pic_sortie {
+    background: url(../images/Airport_icons-02-1282.png) no-repeat;
+
+}
+
+.pic_arrival {
+    background: url(../images/Airport_icons-03-1282.png) no-repeat;
+
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+
+
+
+.scoreboard tr td a {
+    display:block;
+    height:100%;
+    width:100%;
+}
+.scoreboard tr td {
+    padding-left: 0;
+    padding-right: 0;
 }
