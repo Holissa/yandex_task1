@@ -8,52 +8,23 @@
 </head>
 <body>
 <!--<div class="header">Header</div>-->
-<span class="tittle">Табло рейсов</span><br>
-<input type="checkbox" id="plane_arrival"/>
-<!--<label for="plane_arrival" id="expand-btn">Прилет</label>-->
-<label for="plane_arrival">Прилет</label>
-<input type="checkbox" id="plane_sortie" />
-<label for="plane_sortie">Вылет</label>
+<!--<span class="tittle">Табло рейсов</span><br>-->
 
-<div class="header">
-    <table class="scoreboard">
-        <thead>
+<input type="checkbox" id="plane_arrival" style="position: absolute; z-index: 7;"/>
+<label for="plane_arrival" style="position: absolute; z-index: 7; margin-left: 15px;">Прилет</label>
+<input type="checkbox" id="plane_sortie" style="position: absolute; z-index: 7; margin-left: 70px;"/>
+<label for="plane_sortie" style="position: absolute; z-index: 7; margin-left: 90px;">Вылет</label>
 
-        <tr>
-
-            <th>Тип рейса</th>
-            <th>Номер рейса</th>
-            <th>Авиакомпания</th>
-            <th>Логотип авиакомпании</th>
-            <th>Тип воздушного судна</th>
-            <th>Аэропорт назначения</th>
-            <th>Плановое время вылета</th>
-            <th>Статус рейса</th>
-            <th>Примечание</th>
-        </tr>
-        </thead>
-    </table>
-</div>
-<div class="firstLayer">
-    <!--<span class="tittle">Табло рейсов</span>-->
-
-    <!--<div style="float: right;">-->
-        <!--<input type="checkbox" id="isexpanded" />-->
-        <!--<label class="checkbox-inline">-->
-            <!--<input type="checkbox" id="inlineCheckbox2" value="option2"> Вылет-->
-        <!--</label>-->
-    <!--</div>-->
-
-    <!--<div class="header">Header</div>-->
-    <div class="header" style="bottom: -40px;">
+<div>
+    <div class="header">
         <table class="scoreboard">
             <thead>
 
             <tr>
 
-                <th>Тип рейса</th>
+                <th style="width: 60px; padding: 5px;">Тип рейса</th>
                 <th>Номер рейса</th>
-                <th class="hide_airline">Авиакомпания</th>
+                <th>Авиакомпания</th>
                 <th>Логотип авиакомпании</th>
                 <th>Тип воздушного судна</th>
                 <th>Аэропорт назначения</th>
@@ -64,606 +35,449 @@
             </thead>
         </table>
     </div>
+    <div class="firstLayer">
+        <span class="tittle">Табло рейсов</span>
+
+        <div class="header" style="bottom: -40px;">
+            <table class="scoreboard">
+                <thead>
+
+                <tr>
+
+                    <th style="width: 60px; padding: 5px;">Тип рейса</th>
+                    <th>Номер рейса</th>
+                    <th class="hide_airline">Авиакомпания</th>
+                    <th>Логотип авиакомпании</th>
+                    <th>Тип воздушного судна</th>
+                    <th>Аэропорт назначения</th>
+                    <th>Плановое время вылета</th>
+                    <th>Статус рейса</th>
+                    <th>Примечание</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <div style=" margin-top: 60px;  height: 1500px;">
+        <table class="scoreboard scoreboard-highlight-all">
+            <!--<thead>-->
+
+            <!--<tr>-->
+
+            <!--<th>Тип рейса</th>-->
+            <!--<th>Номер рейса</th>-->
+            <!--<th>Авиакомпания</th>-->
+            <!--<th>Логотип авиакомпании</th>-->
+            <!--<th>Тип воздушного судна</th>-->
+            <!--<th>Аэропорт назначения</th>-->
+            <!--<th>Плановое время вылета</th>-->
+            <!--<th>Статус рейса</th>-->
+            <!--<th>Примечание</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <tbody>
+
+            <tr class="greyLine arrival_hidden"></tr>
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow" style="width: 51px; padding: 5px;">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow" style="width: 70px; padding: 5px;">Р2 5803</a></td>
+                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
+                    авиалинии</a></td>
+                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow">23:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+            </tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">УН 041</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
+                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
+                <td><a href="#modalWindow">Боинг 767-300</a></td>
+                <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
+                <td><a href="#modalWindow">23:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А07</a></td>
+                <td><a href="#modalWindow">-</a></td>
+            </tr>
+            <tr class="greyLine sortie_hidden"></tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">ЮТ 4115</a></td>
+                <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
+                <td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>
+                <td><a href="#modalWindow">Боинг 767-300</a></td>
+                <td><a href="#modalWindow">Иркутск</a></td>
+                <td><a href="#modalWindow">23:20
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Вылетел в 21:19. Ожидается в 23:19</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+            </tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">ДР 259</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Победа</a></td>
+                <td><a href="#modalWindow"><img src="images/pobeda.png"></a></td>
+                <td><a href="#modalWindow">Боинг 737-800 (в)</a></td>
+                <td><a href="#modalWindow">Сургут</a></td>
+                <td><a href="#modalWindow">23:40
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Идёт посадка. Окончание в 23:15. Выход 10A</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+            </tr>
+            <tr class="greyLine sortie_hidden"></tr>
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">ЮТ 462</a></td>
+                <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
+                <td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Анапа (Витязево)</a></td>
+                <td><a href="#modalWindow">23:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Прилетел в 23:12. Лента выдачи багажа А08</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+            </tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">СУ 5820</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Аэрофлот — российские авиалинии</a></td>
+                <td><a href="#modalWindow"><img src="images/airflot.gif"> </a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow">23:05
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Задержан до 23:30.Позднее прибытие ВС.Идёт посадка</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+            </tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">UN 252</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
+                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Рига (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow">23:20
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Прилетел в 23:04. Идёт выдача багажа.Лента А12</a></td>
+                <td><a href="#modalWindow">-</a></td>
+            </tr>
+            <tr class="greyLine sortie_hidden"></tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">Р2 5805</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Оренбургские авиалинии</a></td>
+                <td><a href="#modalWindow"><img src="images/orenair.png"></a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow">23:45
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Вылетел в 21:32. Ожидается в 23:44</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+            </tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">ЮТ 595</a></td>
+                <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
+                <td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>
+                <td><a href="#modalWindow">Боинг 737-500</a></td>
+                <td><a href="#modalWindow">Усинск</a></td>
+                <td><a href="#modalWindow">23:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Посадка закончена. Выход 08A</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+            </tr>
+            <tr class="greyLine sortie_hidden"></tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">UN 543</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
+                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
+                <td><a href="#modalWindow">Боинг 767-300</a></td>
+                <td><a href="#modalWindow">ДЕЛИ(ИНДИРА ГАНДИ ИНТ.)</a></td>
+                <td><a href="#modalWindow">23:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Идёт посадка. Окончание в 11:37. Выход 19</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+            </tr>
+            <tr class="greyLine"></tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">UN 555</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
+                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Париж (Орли)</a></td>
+                <td><a href="#modalWindow">23:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Задержан до 12:00. Тех.причина</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+            </tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">ДР 164</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Победа</a></td>
+                <td><a href="#modalWindow"><img src="images/pobeda.png"></a></td>
+                <td><a href="#modalWindow">Боинг 767-300</a></td>
+                <td><a href="#modalWindow">Астрахань (Нариманово)</a></td>
+                <td><a href="#modalWindow">23:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Прилетел в 11:46. Идёт выдача багажа.Лента А06</a></td>
+                <td><a href="#modalWindow">-</a></td>
+            </tr>
+            <tr class="greyLine"></tr>
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">СУ 6128</a></td>
+                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Аэрофлот —
+                    российские авиалинии</a></td>
+                <td><a href="#modalWindow"><img src="images/airflot.gif"> </a></td>
+                <td><a href="#modalWindow">Аэробус А319</a></td>
+                <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
+                <td><a href="#modalWindow">23:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+            </tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">УН 172</a></td>
+                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Трансаэро</a></td>
+                <td><a href="#modalWindow"><img src="images/transair.png"> </a></td>
+                <td><a href="#modalWindow">Боинг 737-400</a></td>
+                <td><a href="#modalWindow">Новый Уренгой</a></td>
+                <td><a href="#modalWindow">23:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Прилетел в 10:55. Закончена выд. багажа на А06</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+            </tr>
+            <tr class="greyLine"></tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">ЮТ 373</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Ютейр</a></td>
+                <td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>
+                <td><a href="#modalWindow">Боинг 767-300</a></td>
+                <td><a href="#modalWindow">Минеральные Воды</a></td>
+                <td><a href="#modalWindow">23:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Вылетел в 11:13</a></td>
+                <td><a href="#modalWindow">-</a></td>
+            </tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">Р2 5803</a></td>
+                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
+                    авиалинии</a></td>
+                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow">23:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+            </tr>
+            <tr class="greyLine"></tr>
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">Р2 5803</a></td>
+                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
+                    авиалинии</a></td>
+                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow">23:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+            </tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">Р2 5803</a></td>
+                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
+                    авиалинии</a></td>
+                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow">23:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+            </tr>
+            <tr class="greyLine"></tr>
+
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">Р2 5803</a></td>
+                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
+                    авиалинии</a></td>
+                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow">23:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+            </tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">УН 041</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
+                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
+                <td><a href="#modalWindow">Боинг 767-300</a></td>
+                <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
+                <td><a href="#modalWindow">23:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А07</a></td>
+                <td><a href="#modalWindow">-</a></td>
+            </tr>
+            <tr class="greyLine"></tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">УН 041</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
+                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
+                <td><a href="#modalWindow">Боинг 767-300</a></td>
+                <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
+                <td><a href="#modalWindow">23:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А07</a></td>
+                <td><a href="#modalWindow">-</a></td>
+            </tr>
+
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow">Р2 5803</a></td>
+                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
+                    авиалинии</a></td>
+                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
+                <td><a href="#modalWindow">Боинг 737-800</a></td>
+                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow">23:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
+                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+            </tr>
+            <tr class="greyLine"></tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow">ДР 232</a></td>
+                <td class="hide_airline"><a href="#modalWindow">Победа</a></td>
+                <td><a href="#modalWindow"><img src="images/pobeda.png"></a></td>
+                <td><a href="#modalWindow">Боинг 737-800 (в)</a></td>
+                <td><a href="#modalWindow">Архангельск (Талаги)</a></td>
+                <td><a href="#modalWindow">23:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow">Прилетел в 11:37. Закончена выд. багажа на А04</a></td>
+                <td><a href="#modalWindow">-</a></td>
+            </tr>
+
+
+            </tbody>
+
+        </table>
+    </div>
 </div>
-
-
-<table class="scoreboard scoreboard-highlight-all">
-    <!--<thead>-->
-
-    <!--<tr>-->
-
-    <!--<th>Тип рейса</th>-->
-    <!--<th>Номер рейса</th>-->
-    <!--<th>Авиакомпания</th>-->
-    <!--<th>Логотип авиакомпании</th>-->
-    <!--<th>Тип воздушного судна</th>-->
-    <!--<th>Аэропорт назначения</th>-->
-    <!--<th>Плановое время вылета</th>-->
-    <!--<th>Статус рейса</th>-->
-    <!--<th>Примечание</th>-->
-    <!--</tr>-->
-    <!--</thead>-->
-    <tbody>
-
-    <tr class="greyLine arrival_hidden"></tr>
-    <tr class="arrival_hidden">
-        <td><a href="#modalWindow"><div class="pic_sortie"></div></a> </td>
-        <td> <a href="#modalWindow">ЮТ 524</a></td>
-        <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
-        <td><a href="#modalWindow">логотип авиакомпании</a></td>
-        <td><a href="#modalWindow">тип воздушного судна</a></td>
-        <td><a href="#modalWindow">Анапа (Витязево)</a></td>
-        <td><a href="#modalWindow">23:00
-            14.07.2015</a>
-        </td>
-        <td><a href="#modalWindow">Прилетел в 23:02. Идёт выдача багажа.Лента А06</a></td>
-        <td><a href="#modalWindow">примечание</a></td>
-    </tr>
-
-    <tr class="sortie_hidden">
-        <td><a href="#modalWindow"><div class="pic_arrival"></div></a></td>
-        <td><a href="#modalWindow">УН 041</a></td>
-        <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
-        <td><a href="#modalWindow">логотип авиакомпании</a></td>
-        <td><a href="#modalWindow">тип воздушного судна</a></td>
-        <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
-        <td><a href="#modalWindow">23:10
-            14.07.2015</a>
-        </td>
-        <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А06</a></td>
-        <td><a href="#modalWindow">примечание</a></td>
-    </tr>
-    <tr class="greyLine sortie_hidden"></tr>
-
-    <tr class="sortie_hidden">
-        <td><a href="#modalWindow"><div class="pic_arrival"></div></a></td>
-        <td><a href="#modalWindow">УН 041</a></td>
-        <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
-        <td><a href="#modalWindow">логотип авиакомпании</a></td>
-        <td><a href="#modalWindow">тип воздушного судна</a></td>
-        <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
-        <td><a href="#modalWindow">23:10
-            14.07.2015</a>
-        </td>
-        <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А06</a></td>
-        <td><a href="#modalWindow">примечание</a></td>
-    </tr>
-
-    <tr class="arrival_hidden">
-        <td><a href="#modalWindow"><div class="pic_sortie"></div></a></td>
-        <td><a href="#modalWindow">УН 041</a></td>
-        <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
-        <td><a href="#modalWindow">логотип авиакомпании</a></td>
-        <td><a href="#modalWindow">тип воздушного судна</a></td>
-        <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
-        <td><a href="#modalWindow">23:10
-            14.07.2015</a>
-        </td>
-        <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А06</a></td>
-        <td><a href="#modalWindow">примечание</a></td>
-    </tr>
-    <tr class="greyLine sortie_hidden"></tr>
-    <tr class="sortie_hidden">
-        <td><a href="#modalWindow"><div class="pic_arrival"></div></a></td>
-        <td><a href="#modalWindow">ЮТ 524</a></td>
-        <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
-        <td><a href="#modalWindow">логотип авиакомпании</a></td>
-        <td><a href="#modalWindow">тип воздушного судна</a></td>
-        <td><a href="#modalWindow">Анапа (Витязево)</a></td>
-        <td><a href="#modalWindow">23:00
-            14.07.2015</a>
-        </td>
-        <td><a href="#modalWindow">Прилетел в 23:02. Идёт выдача багажа.Лента А06</a></td>
-        <td><a href="#modalWindow">примечание</a></td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td class="hide_airline">ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td class="hide_airline">ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td class="hide_airline">ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td class="hide_airline">ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td class="hide_airline">ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td class="hide_airline">ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td class="hide_airline">ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-    <tr>
-        <td>тип рейса</td>
-        <td>ЮТ 524</td>
-        <td class="hide_airline">ЮТэйр</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Анапа (Витязево)</td>
-        <td>23:00
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:02. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    <tr class="greyLine"></tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-
-    <tr>
-        <td>тип рейса</td>
-        <td>УН 041</td>
-        <td class="hide_airline">Трансаэро</td>
-        <td>логотип авиакомпании</td>
-        <td>тип воздушного судна</td>
-        <td>Санкт-Петербург (Пулково)</td>
-        <td>23:10
-            14.07.2015
-        </td>
-        <td>Прилетел в 23:14. Идёт выдача багажа.Лента А06</td>
-        <td>примечание</td>
-    </tr>
-    </tbody>
-
-</table>
-
 <div id="modalWindow" class="modalDialog">
     <div>
         <a href="#close" title="Close" class="close">X</a>
+
         <h2>Информация о рейсе</h2>
+
         <p>Тип рейса</p>
+
         <p>Номер рейса</p>
     </div>
 </div>

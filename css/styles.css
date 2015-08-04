@@ -4,7 +4,7 @@ body {
 }
 
 .scoreboard {
-    margin-top: 45px;
+
     border: solid 1px #DDEEEE;
     border-collapse: collapse;
     border-spacing: 0;
@@ -91,33 +91,37 @@ body {
     /*background-color: #ccc;*/
     width: 100%;
     position: fixed;
-    /*top: 0;*/
-    /*bottom: auto;*/
+    top: 0;
+    bottom: auto;
 
 }
 
 .firstLayer {
     background-color: #fff;
     position: relative;
-    height: 100px;
+    height: 60px;
 }
 
 /*.firstLayer .tittle {*/
-    /*font-size: 36px;*/
+/*font-size: 36px;*/
 /*}*/
 .tittle {
     font-size: 36px;
+    float: right;
 }
+
 .firstLayer .header {
     position: absolute;
-    /*bottom: 0;*/
+    bottom: 0;
     z-index: 2;
-    /*top: auto;*/
+    top: auto;
 
 }
 
 @media all and (max-width: 900px) {
-    .hide_airline {display: none;}
+    .hide_airline {
+        display: none;
+    }
 }
 
 #plane_arrival:checked ~ * tr.arrival_hidden {
@@ -129,18 +133,21 @@ body {
     display: none;
 
 }
+
 .pic_sortie, .pic_arrival {
-    width: 20px;
+    width: 50px;
     height: 20px;
 }
+
 .pic_sortie {
     background: url(../images/Airport_icons-02-1282.png) no-repeat;
+    background-position: center;
 
 }
 
 .pic_arrival {
     background: url(../images/Airport_icons-03-1282.png) no-repeat;
-
+    background-position: center;
 }
 
 .modalDialog {
@@ -150,18 +157,17 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 99999;
-    opacity:0;
+    opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
 }
 
-
 .modalDialog:target {
-    opacity:1;
+    opacity: 1;
     pointer-events: auto;
 }
 
@@ -177,13 +183,12 @@ body {
     background: -o-linear-gradient(#fff, #999);
 }
 
-
-
 .scoreboard tr td a {
-    display:block;
-    height:100%;
-    width:100%;
+    display: block;
+    height: 100%;
+    width: 100%;
 }
+
 .scoreboard tr td {
     padding-left: 0;
     padding-right: 0;
