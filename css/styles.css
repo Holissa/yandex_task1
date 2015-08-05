@@ -14,9 +14,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 
+
 }
 
-/*tr:nth-child(even)           {background-color:#ecf6fc;}*/
+/*tr:nth-child(even)           {background-color:#ecf6fc;  }*/
 /*tr:nth-child(odd)           {background-color:white;}*/
 
 .scoreboard thead th {
@@ -100,6 +101,7 @@ body {
     background-color: #fff;
     position: relative;
     height: 60px;
+    z-index: 3;
 }
 
 /*.firstLayer .tittle {*/
@@ -113,7 +115,7 @@ body {
 .firstLayer .header {
     position: absolute;
     bottom: 0;
-    z-index: 2;
+    z-index: 4;
     top: auto;
 
 }
@@ -121,7 +123,9 @@ body {
 @media all and (max-width: 900px) {
     .hide_airline {
         display: none;
+
     }
+
 }
 
 #plane_arrival:checked ~ * tr.arrival_hidden {
@@ -172,7 +176,7 @@ body {
 }
 
 .modalDialog > div {
-    width: 400px;
+    width: 600px;
     position: relative;
     margin: 10% auto;
     padding: 5px 20px 13px 20px;
@@ -192,4 +196,25 @@ body {
 .scoreboard tr td {
     padding-left: 0;
     padding-right: 0;
+}
+
+
+.logo_airline{
+    float: right;
+}
+
+
+div .modal_Column {
+    -moz-column-count: 2;
+    -moz-column-gap: 0px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0px;
+    column-count: 2;
+    column-gap: 0px;
+}
+
+.modal-Line {
+    /*border-bottom: solid black 1px;*/
+    list-style-type: none;
+    width: 300px;
 }

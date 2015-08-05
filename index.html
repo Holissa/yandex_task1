@@ -16,20 +16,19 @@
 <label for="plane_sortie" style="position: absolute; z-index: 7; margin-left: 90px;">Вылет</label>
 
 <div>
-    <div class="header">
+    <div class="header" style="z-index: 1;">
         <table class="scoreboard">
             <thead>
 
             <tr>
 
-                <th style="width: 60px; padding: 5px;">Тип рейса</th>
-                <th>Номер рейса</th>
-                <th>Авиакомпания</th>
-                <th>Логотип авиакомпании</th>
-                <th>Тип воздушного судна</th>
-                <th>Аэропорт назначения</th>
-                <th>Плановое время вылета</th>
-                <th>Статус рейса</th>
+                <th style="width: 7%; padding: 5px;">Тип рейса</th>
+                <th style="width: 10%; padding: 5px;">Номер рейса</th>
+                <th style="width: 20%; padding: 5px;">Авиакомпания</th>
+                <th style="width: 15%; padding: 5px;">Тип воздушного судна</th>
+                <th style="width: 15%; padding: 5px;">Аэропорт назначения</th>
+                <th style="width: 10%;padding: 5px; ">Плановое время</th>
+                <th style="width: 15%;padding: 5px; ">Статус рейса</th>
                 <th>Примечание</th>
             </tr>
             </thead>
@@ -44,14 +43,13 @@
 
                 <tr>
 
-                    <th style="width: 60px; padding: 5px;">Тип рейса</th>
-                    <th>Номер рейса</th>
-                    <th class="hide_airline">Авиакомпания</th>
-                    <th>Логотип авиакомпании</th>
-                    <th>Тип воздушного судна</th>
-                    <th>Аэропорт назначения</th>
-                    <th>Плановое время вылета</th>
-                    <th>Статус рейса</th>
+                    <th style="width: 7%; padding: 5px;">Тип рейса</th>
+                    <th style="width: 10% ">Номер рейса</th>
+                    <th style="width: 20%; padding: 5px;">Авиакомпания</th>
+                    <th style="width: 15%; padding: 5px;">Тип воздушного судна</th>
+                    <th style="width: 15%; padding: 5px;">Аэропорт назначения</th>
+                    <th style="width: 10%;padding: 5px; ">Плановое время</th>
+                    <th style="width: 15%;padding: 5px; ">Статус рейса</th>
                     <th>Примечание</th>
                 </tr>
                 </thead>
@@ -59,7 +57,7 @@
         </div>
     </div>
 
-    <div style=" margin-top: 60px;  height: 1500px;">
+    <div style=" margin-top: 40px;  height: 1500px;">
         <table class="scoreboard scoreboard-highlight-all">
             <!--<thead>-->
 
@@ -78,390 +76,484 @@
             <!--</thead>-->
             <tbody>
 
-            <tr class="greyLine arrival_hidden"></tr>
+            <!--<tr class="greyLine"></tr>-->
             <tr class="arrival_hidden">
-                <td><a href="#modalWindow" style="width: 51px; padding: 5px;">
+                <td style="width: 7%; padding: 5px;"><a href="#modalWindow">
                     <div class="pic_sortie"></div>
                 </a></td>
-                <td><a href="#modalWindow" style="width: 70px; padding: 5px;">Р2 5803</a></td>
-                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
-                    авиалинии</a></td>
-                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
-                <td><a href="#modalWindow">23:00
+                <td style="width: 10%; padding: 5px;"><a href="#modalWindow">Р2 5803</a></td>
+                <td style="width: 20%; padding: 5px;"><a href="#modalWindow">
+                    <span class="hide_airline" style="float: left;">Оренбургские авиалинии </span>
+                    <img src="images/orenair.png" class="logo_airline">
+                </a></td>
+                <!--<td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>-->
+                <td style="width: 15%;padding: 5px; "><a href="#modalWindow">Боинг 737-800</a></td>
+                <td style="width: 15%;padding: 5px; "><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
+                <td style="width: 10%;padding: 5px; "><a href="#modalWindow">13:00
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
+                <td style="width: 15%;padding: 5px; "><a href="#modalWindow">Вылетел в 13:18</a></td>
                 <td><a href="#modalWindow">Совмещен с KL2881</a></td>
             </tr>
 
             <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow2">
                     <div class="pic_arrival"></div>
                 </a></td>
-                <td><a href="#modalWindow">УН 041</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
-                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
-                <td><a href="#modalWindow">Боинг 767-300</a></td>
-                <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
-                <td><a href="#modalWindow">23:10
+                <td><a href="#modalWindow2">УН 041</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>-->
+                <td><a href="#modalWindow2">
+                    <span class="hide_airline" style="float: left;">Трансаэро </span>
+                    <img src="images/transair.png" class="logo_airline">
+                </a></td>
+                <!--<td><a href="#modalWindow"><img src="images/transair.png"></a></td>-->
+                <td><a href="#modalWindow2">Боинг 767-300</a></td>
+                <td><a href="#modalWindow2">Санкт-Петербург (Пулково)</a></td>
+                <td><a href="#modalWindow2">13:10
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А07</a></td>
-                <td><a href="#modalWindow">-</a></td>
+                <td><a href="#modalWindow2">Прилетел в 13:15. Идёт выдача багажа.Лента Д04</a></td>
+                <td><a href="#modalWindow2">-</a></td>
             </tr>
-            <tr class="greyLine sortie_hidden"></tr>
+            <!--<tr class="greyLine"></tr>-->
 
             <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow3">
                     <div class="pic_arrival"></div>
                 </a></td>
-                <td><a href="#modalWindow">ЮТ 4115</a></td>
-                <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
-                <td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>
-                <td><a href="#modalWindow">Боинг 767-300</a></td>
-                <td><a href="#modalWindow">Иркутск</a></td>
-                <td><a href="#modalWindow">23:20
+                <td><a href="#modalWindow3">ЮТ 4115</a></td>
+                <td><a href="#modalWindow3">
+                    <span class="hide_airline">ЮТейр </span>
+                    <img src="images/Utair.jpg" class="logo_airline">
+                </a></td>
+
+                <!--<td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>-->
+
+                <td><a href="#modalWindow3">Боинг 767-300</a></td>
+                <td><a href="#modalWindow3">Иркутск</a></td>
+                <td><a href="#modalWindow3">13:20
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Вылетел в 21:19. Ожидается в 23:19</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+                <td><a href="#modalWindow3">Прилетел в 13:18. Закончена выд. багажа на В04</a></td>
+                <td><a href="#modalWindow3">Совмещен с KL2879</a></td>
             </tr>
 
             <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow4">
                     <div class="pic_sortie"></div>
                 </a></td>
-                <td><a href="#modalWindow">ДР 259</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Победа</a></td>
-                <td><a href="#modalWindow"><img src="images/pobeda.png"></a></td>
-                <td><a href="#modalWindow">Боинг 737-800 (в)</a></td>
-                <td><a href="#modalWindow">Сургут</a></td>
-                <td><a href="#modalWindow">23:40
+                <td><a href="#modalWindow4">ДР 259</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Победа</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/pobeda.png"></a></td>-->
+                <td><a href="#modalWindow4">
+                    <span class="hide_airline" style="float: left;">Победа </span>
+                    <img src="images/pobeda.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow4">Боинг 737-800 (в)</a></td>
+                <td><a href="#modalWindow4">Сургут</a></td>
+                <td><a href="#modalWindow4">13:30
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Идёт посадка. Окончание в 23:15. Выход 10A</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+                <td><a href="#modalWindow4">Задержан до 14:40. Позднее прибытие ВС</a></td>
+                <td><a href="#modalWindow4">Совмещен с KL2879</a></td>
             </tr>
-            <tr class="greyLine sortie_hidden"></tr>
+            <!--<tr class="greyLine"></tr>-->
             <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow5">
                     <div class="pic_arrival"></div>
                 </a></td>
-                <td><a href="#modalWindow">ЮТ 462</a></td>
-                <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
-                <td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Анапа (Витязево)</a></td>
-                <td><a href="#modalWindow">23:00
+                <td><a href="#modalWindow5">ЮТ 462</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>-->
+                <td style="width: 210px; "><a href="#modalWindow">
+                    <span class="hide_airline" style="float: left;">Ютейр </span>
+                    <img src="images/Utair.jpg" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow5">Боинг 737-800</a></td>
+                <td><a href="#modalWindow5">Анапа (Витязево)</a></td>
+                <td><a href="#modalWindow5">13:30
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Прилетел в 23:12. Лента выдачи багажа А08</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+                <td><a href="#modalWindow5">Прилетел в 13:10. Закончена выд. багажа на А05</a></td>
+                <td><a href="#modalWindow5">Совмещен с PS2879</a></td>
             </tr>
 
             <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow6">
                     <div class="pic_sortie"></div>
                 </a></td>
-                <td><a href="#modalWindow">СУ 5820</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Аэрофлот — российские авиалинии</a></td>
-                <td><a href="#modalWindow"><img src="images/airflot.gif"> </a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
-                <td><a href="#modalWindow">23:05
-                    14.07.2015</a>
-                </td>
-                <td><a href="#modalWindow">Задержан до 23:30.Позднее прибытие ВС.Идёт посадка</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
-            </tr>
-
-            <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_arrival"></div>
+                <td><a href="#modalWindow6">СУ 5820</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Аэрофлот — российские авиалинии</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/airflot.gif"> </a></td>-->
+                <td><a href="#modalWindow6">
+                    <span class="hide_airline" style="float: left;">Аэрофлот </span>
+                    <img src="images/airflot.gif" class="logo_airline">
                 </a></td>
-                <td><a href="#modalWindow">UN 252</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
-                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Рига (Интернэйшнл)</a></td>
-                <td><a href="#modalWindow">23:20
-                    14.07.2015</a>
-                </td>
-                <td><a href="#modalWindow">Прилетел в 23:04. Идёт выдача багажа.Лента А12</a></td>
-                <td><a href="#modalWindow">-</a></td>
-            </tr>
-            <tr class="greyLine sortie_hidden"></tr>
 
-            <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_arrival"></div>
-                </a></td>
-                <td><a href="#modalWindow">Р2 5805</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Оренбургские авиалинии</a></td>
-                <td><a href="#modalWindow"><img src="images/orenair.png"></a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
-                <td><a href="#modalWindow">23:45
+                <td><a href="#modalWindow6">Боинг 737-800</a></td>
+                <td><a href="#modalWindow6">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow6">13:30
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Вылетел в 21:32. Ожидается в 23:44</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
-            </tr>
-
-            <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_sortie"></div>
-                </a></td>
-                <td><a href="#modalWindow">ЮТ 595</a></td>
-                <td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>
-                <td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>
-                <td><a href="#modalWindow">Боинг 737-500</a></td>
-                <td><a href="#modalWindow">Усинск</a></td>
-                <td><a href="#modalWindow">23:10
-                    14.07.2015</a>
-                </td>
-                <td><a href="#modalWindow">Посадка закончена. Выход 08A</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
-            </tr>
-            <tr class="greyLine sortie_hidden"></tr>
-
-            <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_sortie"></div>
-                </a></td>
-                <td><a href="#modalWindow">UN 543</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
-                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
-                <td><a href="#modalWindow">Боинг 767-300</a></td>
-                <td><a href="#modalWindow">ДЕЛИ(ИНДИРА ГАНДИ ИНТ.)</a></td>
-                <td><a href="#modalWindow">23:10
-                    14.07.2015</a>
-                </td>
-                <td><a href="#modalWindow">Идёт посадка. Окончание в 11:37. Выход 19</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
-            </tr>
-            <tr class="greyLine"></tr>
-
-            <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_sortie"></div>
-                </a></td>
-                <td><a href="#modalWindow">UN 555</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
-                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Париж (Орли)</a></td>
-                <td><a href="#modalWindow">23:10
-                    14.07.2015</a>
-                </td>
-                <td><a href="#modalWindow">Задержан до 12:00. Тех.причина</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2879</a></td>
+                <td><a href="#modalWindow6">Посадка закончена. Выход 12A</a></td>
+                <td><a href="#modalWindow6">Совмещен с KL2881</a></td>
             </tr>
 
             <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow7">
                     <div class="pic_arrival"></div>
                 </a></td>
-                <td><a href="#modalWindow">ДР 164</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Победа</a></td>
-                <td><a href="#modalWindow"><img src="images/pobeda.png"></a></td>
-                <td><a href="#modalWindow">Боинг 767-300</a></td>
-                <td><a href="#modalWindow">Астрахань (Нариманово)</a></td>
-                <td><a href="#modalWindow">23:10
-                    14.07.2015</a>
-                </td>
-                <td><a href="#modalWindow">Прилетел в 11:46. Идёт выдача багажа.Лента А06</a></td>
-                <td><a href="#modalWindow">-</a></td>
-            </tr>
-            <tr class="greyLine"></tr>
-            <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_sortie"></div>
+                <td><a href="#modalWindow7">UN 252</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/transair.png"></a></td>-->
+                <td style="width: 210px; "><a href="#modalWindow7">
+                    <span class="hide_airline" style="float: left;">Трансаэро </span>
+                    <img src="images/transair.png" class="logo_airline">
                 </a></td>
-                <td><a href="#modalWindow">СУ 6128</a></td>
-                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Аэрофлот —
-                    российские авиалинии</a></td>
-                <td><a href="#modalWindow"><img src="images/airflot.gif"> </a></td>
-                <td><a href="#modalWindow">Аэробус А319</a></td>
-                <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
-                <td><a href="#modalWindow">23:00
-                    14.07.2015</a>
-                </td>
-                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
-            </tr>
 
-            <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_sortie"></div>
-                </a></td>
-                <td><a href="#modalWindow">УН 172</a></td>
-                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Трансаэро</a></td>
-                <td><a href="#modalWindow"><img src="images/transair.png"> </a></td>
-                <td><a href="#modalWindow">Боинг 737-400</a></td>
-                <td><a href="#modalWindow">Новый Уренгой</a></td>
-                <td><a href="#modalWindow">23:00
+                <td><a href="#modalWindow7">Боинг 737-800</a></td>
+                <td><a href="#modalWindow7">Рига (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow7">13:35
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Прилетел в 10:55. Закончена выд. багажа на А06</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+                <td><a href="#modalWindow7">Прилетел в 13:48. Идёт выдача багажа.Лента В03</a></td>
+                <td><a href="#modalWindow7">-</a></td>
             </tr>
-            <tr class="greyLine"></tr>
+            <!--<tr class="greyLine"></tr>-->
 
             <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow8">
                     <div class="pic_arrival"></div>
                 </a></td>
-                <td><a href="#modalWindow">ЮТ 373</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Ютейр</a></td>
-                <td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>
-                <td><a href="#modalWindow">Боинг 767-300</a></td>
-                <td><a href="#modalWindow">Минеральные Воды</a></td>
-                <td><a href="#modalWindow">23:10
+                <td><a href="#modalWindow8">Р2 5805</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Оренбургские авиалинии</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/orenair.png"></a></td>-->
+                <td><a href="#modalWindow8">
+                    <span class="hide_airline" style="float: left;">Оренбургские авиалинии </span>
+                    <img src="images/orenair.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow8">Боинг 737-800</a></td>
+                <td><a href="#modalWindow8">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow8">13:35
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Вылетел в 11:13</a></td>
-                <td><a href="#modalWindow">-</a></td>
+                <td><a href="#modalWindow8">Прилетел в 13:58. Идёт выдача багажа.Лента А06</a></td>
+                <td><a href="#modalWindow8">Совмещен с KL2879</a></td>
             </tr>
 
             <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow9">
                     <div class="pic_sortie"></div>
                 </a></td>
-                <td><a href="#modalWindow">Р2 5803</a></td>
-                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
-                    авиалинии</a></td>
-                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
-                <td><a href="#modalWindow">23:00
-                    14.07.2015</a>
-                </td>
-                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
-            </tr>
-            <tr class="greyLine"></tr>
-            <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_sortie"></div>
+                <td><a href="#modalWindow9">ЮТ 595</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">ЮТэйр</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>-->
+                <td style="width: 210px; "><a href="#modalWindow9">
+                    <span class="hide_airline" style="float: left;">ЮТейр </span>
+                    <img src="images/Utair.jpg" class="logo_airline">
                 </a></td>
-                <td><a href="#modalWindow">Р2 5803</a></td>
-                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
-                    авиалинии</a></td>
-                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
-                <td><a href="#modalWindow">23:00
+
+                <td><a href="#modalWindow9">Боинг 737-500</a></td>
+                <td><a href="#modalWindow9">Усинск</a></td>
+                <td><a href="#modalWindow9">13:45
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+                <td><a href="#modalWindow9">Посадка закончена. Выход 29</a></td>
+                <td><a href="#modalWindow9">Совмещен с KL2879</a></td>
             </tr>
+            <!--<tr class="greyLine"></tr>-->
 
             <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow10">
                     <div class="pic_sortie"></div>
                 </a></td>
-                <td><a href="#modalWindow">Р2 5803</a></td>
-                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
-                    авиалинии</a></td>
-                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
-                <td><a href="#modalWindow">23:00
+                <td><a href="#modalWindow10">UN 543</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/transair.png"></a></td>-->
+                <td><a href="#modalWindow10">
+                    <span class="hide_airline" style="float: left;">Трансаэро </span>
+                    <img src="images/transair.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow10">Боинг 767-300</a></td>
+                <td><a href="#modalWindow10">ДЕЛИ(ИНДИРА ГАНДИ ИНТ.)</a></td>
+                <td><a href="#modalWindow10">13:45
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+                <td><a href="#modalWindow10">Посадка закончена. Выход B08</a></td>
+                <td><a href="#modalWindow10">Совмещен с KL2879</a></td>
             </tr>
-            <tr class="greyLine"></tr>
+            <!--<tr class="greyLine"></tr>-->
 
-
-            <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_sortie"></div>
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow11">
+                    <div class="pic_arrival"></div>
                 </a></td>
-                <td><a href="#modalWindow">Р2 5803</a></td>
-                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
-                    авиалинии</a></td>
-                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
-                <td><a href="#modalWindow">23:00
+                <td><a href="#modalWindow11">УН 041</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/transair.png"></a></td>-->
+                <td><a href="#modalWindow11">
+                    <span class="hide_airline" style="float: left;">Трасаэро </span>
+                    <img src="images/transair.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow11">Боинг 767-300</a></td>
+                <td><a href="#modalWindow11">Горно-Алтайск</a></td>
+                <td><a href="#modalWindow11">13:50
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
+                <td><a href="#modalWindow11">Прилетел в 13:44. Идёт выдача багажа.Лента А12</a></td>
+                <td><a href="#modalWindow11">-</a></td>
+            </tr>
+            <!--<tr class="greyLine"></tr>-->
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow12">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow12">УН 041</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/transair.png"></a></td>-->
+                <td><a href="#modalWindow12">
+                    <span class="hide_airline" style="float: left;">Трасаэро </span>
+                    <img src="images/transair.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow12">Боинг 767-300</a></td>
+                <td><a href="#modalWindow12">Санкт-Петербург (Пулково)</a></td>
+                <td><a href="#modalWindow12">13:50
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow12">Прилетел в 13:39. Идёт выдача багажа.Лента А04</a></td>
+                <td><a href="#modalWindow12">-</a></td>
             </tr>
 
             <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow13">
                     <div class="pic_arrival"></div>
                 </a></td>
-                <td><a href="#modalWindow">УН 041</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
-                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
-                <td><a href="#modalWindow">Боинг 767-300</a></td>
-                <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
-                <td><a href="#modalWindow">23:10
+                <td><a href="#modalWindow13">ЮТ 373</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Ютейр</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/Utair.jpg"></a></td>-->
+                <td><a href="#modalWindow13">
+                    <span class="hide_airline" style="float: left;">ЮТейр </span>
+                    <img src="images/Utair.jpg" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow13">Боинг 767-300</a></td>
+                <td><a href="#modalWindow13">Минеральные Воды</a></td>
+                <td><a href="#modalWindow13">13:50
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А07</a></td>
-                <td><a href="#modalWindow">-</a></td>
+                <td><a href="#modalWindow13">Прилетел в 13:49. Идёт выдача багажа.Лента А07</a></td>
+                <td><a href="#modalWindow13">-</a></td>
             </tr>
-            <tr class="greyLine"></tr>
+
+
+            <!--<tr class="greyLine"></tr>-->
 
             <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow14">
                     <div class="pic_arrival"></div>
                 </a></td>
-                <td><a href="#modalWindow">УН 041</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>
-                <td><a href="#modalWindow"><img src="images/transair.png"></a></td>
-                <td><a href="#modalWindow">Боинг 767-300</a></td>
-                <td><a href="#modalWindow">Санкт-Петербург (Пулково)</a></td>
-                <td><a href="#modalWindow">23:10
+                <td><a href="#modalWindow14">ДР 232</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Победа</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/pobeda.png"></a></td>-->
+                <td><a href="#modalWindow14">
+                    <span class="hide_airline" style="float: left;">Победа </span>
+                    <img src="images/pobeda.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow14">Боинг 737-800 (в)</a></td>
+                <td><a href="#modalWindow14">Архангельск (Талаги)</a></td>
+                <td><a href="#modalWindow14">13:55
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Прилетел в 23:14. Идёт выдача багажа.Лента А07</a></td>
-                <td><a href="#modalWindow">-</a></td>
+                <td><a href="#modalWindow14">Прилетел в 13:42. Идёт выдача багажа.Лента А13</a></td>
+                <td><a href="#modalWindow14">-</a></td>
             </tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow15">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow15">UN 555</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Трансаэро</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/transair.png"></a></td>-->
+                <td><a href="#modalWindow15">
+                    <span class="hide_airline" style="float: left;">Трансаэро </span>
+                    <img src="images/transair.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow15">Боинг 737-800</a></td>
+                <td><a href="#modalWindow15">Париж (Орли)</a></td>
+                <td><a href="#modalWindow15">14:00
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow15">Задержан до 16:20. Тех.причина</a></td>
+                <td><a href="#modalWindow15">Совмещен с KL2879</a></td>
+            </tr>
+
+            <tr class="sortie_hidden">
+                <td><a href="#modalWindow16">
+                    <div class="pic_arrival"></div>
+                </a></td>
+                <td><a href="#modalWindow16">ДР 164</a></td>
+                <!--<td class="hide_airline"><a href="#modalWindow">Победа</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/pobeda.png"></a></td>-->
+                <td><a href="#modalWindow16">
+                    <span class="hide_airline" style="float: left;">Победа </span>
+                    <img src="images/pobeda.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow16">Боинг 767-300</a></td>
+                <td><a href="#modalWindow16">Астрахань (Нариманово)</a></td>
+                <td><a href="#modalWindow16">14:05
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow16">Прилетел в 14:10. Закончена выд. багажа на А08</a></td>
+                <td><a href="#modalWindow16">-</a></td>
+            </tr>
+            <!--<tr class="greyLine"></tr>-->
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow17">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow17">СУ 6128</a></td>
+                <!--<td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Аэрофлот —-->
+                <!--российские авиалинии</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/airflot.gif"> </a></td>-->
+                <td><a href="#modalWindow17">
+                    <span class="hide_airline" style="float: left;">Аэрофлот </span>
+                    <img src="images/airflot.gif" class="logo_airline">
+                </a></td>
+
+
+                <td><a href="#modalWindow17">Аэробус А319</a></td>
+                <td><a href="#modalWindow17">Санкт-Петербург (Пулково)</a></td>
+                <td><a href="#modalWindow17">14:10
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow17">Посадка закончена. Выход 29</a></td>
+                <td><a href="#modalWindow17">Совмещен с KL2881</a></td>
+            </tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow18">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow18">УН 172</a></td>
+                <!--<td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Трансаэро</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/transair.png"> </a></td>-->
+                <td><a href="#modalWindow18">
+                    <span class="hide_airline" style="float: left;">Трансаэро </span>
+                    <img src="images/transair.png" class="logo_airline">
+                </a></td>
+
+
+                <td><a href="#modalWindow18">Боинг 737-400</a></td>
+                <td><a href="#modalWindow18">Новый Уренгой</a></td>
+                <td><a href="#modalWindow18">14:15
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow18">Посадка закончена. Выход 13A</a></td>
+                <td><a href="#modalWindow18">Совмещен с KL2881</a></td>
+            </tr>
+            <!--<tr class="greyLine"></tr>-->
 
 
             <tr class="arrival_hidden">
-                <td><a href="#modalWindow">
+                <td><a href="#modalWindow19">
                     <div class="pic_sortie"></div>
                 </a></td>
-                <td><a href="#modalWindow">Р2 5803</a></td>
-                <td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские
-                    авиалинии</a></td>
-                <td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>
-                <td><a href="#modalWindow">Боинг 737-800</a></td>
-                <td><a href="#modalWindow">Симферополь (Интернэйшнл)</a></td>
-                <td><a href="#modalWindow">23:00
-                    14.07.2015</a>
-                </td>
-                <td><a href="#modalWindow">Задержан до 23:30. Позднее прибытие ВС</a></td>
-                <td><a href="#modalWindow">Совмещен с KL2881</a></td>
-            </tr>
-            <tr class="greyLine"></tr>
-
-            <tr class="sortie_hidden">
-                <td><a href="#modalWindow">
-                    <div class="pic_arrival"></div>
+                <td><a href="#modalWindow19">Р2 5819</a></td>
+                <!--<td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские-->
+                <!--авиалинии</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>-->
+                <td><a href="#modalWindow19">
+                    <span class="hide_airline" style="float: left;">Оренбургские авиалинии </span>
+                    <img src="images/orenair.png" class="logo_airline">
                 </a></td>
-                <td><a href="#modalWindow">ДР 232</a></td>
-                <td class="hide_airline"><a href="#modalWindow">Победа</a></td>
-                <td><a href="#modalWindow"><img src="images/pobeda.png"></a></td>
-                <td><a href="#modalWindow">Боинг 737-800 (в)</a></td>
-                <td><a href="#modalWindow">Архангельск (Талаги)</a></td>
-                <td><a href="#modalWindow">23:10
+
+                <td><a href="#modalWindow19">Боинг 737-800</a></td>
+                <td><a href="#modalWindow19">Симферополь (Интернэйшнл)</a></td>
+                <td><a href="#modalWindow19">14:50
                     14.07.2015</a>
                 </td>
-                <td><a href="#modalWindow">Прилетел в 11:37. Закончена выд. багажа на А04</a></td>
-                <td><a href="#modalWindow">-</a></td>
+                <td><a href="#modalWindow19">Регистрация закончена. Посадка с 14:20. Выход B08</a></td>
+                <td><a href="#modalWindow19">Совмещен с KL2881</a></td>
+            </tr>
+            <!--<tr class="greyLine"></tr>-->
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow20">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow20">Р2 5803</a></td>
+                <!--<td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские-->
+                <!--авиалинии</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>-->
+                <td><a href="#modalWindow20">
+                    <span class="hide_airline" style="float: left;">Оренбургские авиалинии </span>
+                    <img src="images/orenair.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow20">Боинг 737-800</a></td>
+                <td><a href="#modalWindow20">Уфа</a></td>
+                <td><a href="#modalWindow20">14:40
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow20">Идёт посадка. Окончание в 14:35. Выход 10A</a></td>
+                <td><a href="#modalWindow20">Совмещен с KL2881</a></td>
+            </tr>
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow21">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow21">Р2 5823</a></td>
+                <!--<td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские-->
+                <!--авиалинии</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>-->
+                <td><a href="#modalWindow21">
+                    <span class="hide_airline" style="float: left;">Оренбургские авиалинии </span>
+                    <img src="images/orenair.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow21">Боинг 737-800</a></td>
+                <td><a href="#modalWindow21">Казань</a></td>
+                <td><a href="#modalWindow21">14:45
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow21">Идёт посадка. Окончание в 14:40. Выход В02 </a></td>
+                <td><a href="#modalWindow21">Совмещен с KL2881</a></td>
+            </tr>
+            <!--<tr class="greyLine"></tr>-->
+
+
+            <tr class="arrival_hidden">
+                <td><a href="#modalWindow22">
+                    <div class="pic_sortie"></div>
+                </a></td>
+                <td><a href="#modalWindow22">Р2 5825</a></td>
+                <!--<td class="hide_airline" style="width: 60px; padding: 10px;"><a href="#modalWindow">Оренбургские-->
+                <!--авиалинии</a></td>-->
+                <!--<td><a href="#modalWindow"><img src="images/orenair.png"> </a></td>-->
+                <td><a href="#modalWindow22">
+                    <span class="hide_airline" style="float: left;">Оренбургские авиалинии </span>
+                    <img src="images/orenair.png" class="logo_airline">
+                </a></td>
+
+                <td><a href="#modalWindow22">Боинг 737-800</a></td>
+                <td><a href="#modalWindow22">Новосибирск (Толмачево)</a></td>
+                <td><a href="#modalWindow22">15:05
+                    14.07.2015</a>
+                </td>
+                <td><a href="#modalWindow22">Идёт посадка. Окончание в 14:45. Выход В06</a></td>
+                <td><a href="#modalWindow22">Совмещен с KL2881</a></td>
             </tr>
 
 
@@ -475,11 +567,778 @@
         <a href="#close" title="Close" class="close">X</a>
 
         <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
 
-        <p>Тип рейса</p>
+                <li class="modal-Line">Номер рейса</li>
 
-        <p>Номер рейса</p>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">Р2 5803</li>
+
+                <li class="modal-Line">Оренбургские авиалинии</li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Симферополь (Интернэйшнл)</li>
+                <li class="modal-Line">13:00
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Вылетел в 13:18</li>
+                <li class="modal-Line">Совмещен с KL2881</li>
+            </ul>
+        </div>
+
+
     </div>
 </div>
+
+<div id="modalWindow2" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+                <li class="modal-Line">Номер рейса</li>
+
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">Р2 5803</li>
+
+                <li class="modal-Line">Трансаэро<img src="images/transair.png"></li>
+                <li class="modal-Line">Боинг 767-300</li>
+                <li class="modal-Line">Санкт-Петербург (Пулково)</li>
+                <li class="modal-Line">13:10
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 13:15. Идёт выдача багажа.Лента Д04</li>
+                <li class="modal-Line">-</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalWindow3" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+                <li class="modal-Line">Номер рейса</li>
+
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">ЮТ 4115</li>
+                <li class="modal-Line">ЮТейр <img src="images/Utair.jpg"></li>
+                <li class="modal-Line">Боинг 767-300</li>
+                <li class="modal-Line">Иркутск</li>
+                <li class="modal-Line">13:20
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 13:18. Закончена выд. багажа на В04</li>
+                <li class="modal-Line">Совмещен с KL2879</li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalWindow4" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">ДР 259</li>
+                <li class="modal-Line">Победа <img src="images/pobeda.png"></li>
+                <li class="modal-Line">Боинг 737-800 (в)</li>
+                <li class="modal-Line">Сургут</li>
+                <li class="modal-Line">13:30
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Задержан до 14:40. Позднее прибытие ВС</li>
+                <li class="modal-Line">Совмещен с KL2879</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalWindow5" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">ЮТ 462</li>
+                <li class="modal-Line">Ютейр<img src="images/Utair.jpg"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Анапа (Витязево)</li>
+                <li class="modal-Line">13:30
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 13:10. Закончена выд. багажа на А05</li>
+                <li class="modal-Line">Совмещен с PS2879</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalWindow6" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">СУ 5820</li>
+                <li class="modal-Line">Аэрофлот <img src="images/airflot.gif"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Симферополь (Интернэйшнл)</li>
+                <li class="modal-Line">13:30
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Посадка закончена. Выход 12A</li>
+                <li class="modal-Line">Совмещен с KL2881</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow7" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">UN 252</li>
+                <li class="modal-Line">Трансаэро <img src="images/transair.png"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Рига (Интернэйшнл)</li>
+                <li class="modal-Line">13:35
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 13:48. Идёт выдача багажа.Лента В03</li>
+                <li class="modal-Line">-</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalWindow8" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">Р2 5805</li>
+                <li class="modal-Line">Оренбургские авиалинии <img src="images/orenair.png"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Симферополь (Интернэйшнл)</li>
+                <li class="modal-Line">13:35
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 13:58. Идёт выдача багажа.Лента А06</li>
+                <li class="modal-Line">Совмещен с KL2879</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalWindow9" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">ЮТ 595</li>
+                <li class="modal-Line">Ютейр<img src="images/Utair.jpg"></li>
+                <li class="modal-Line">Боинг 737-500</li>
+                <li class="modal-Line">Усинск</li>
+                <li class="modal-Line">13:45
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Посадка закончена. Выход 29</li>
+                <li class="modal-Line">Совмещен с KL2879</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalWindow10" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">UN 543</li>
+                <li class="modal-Line">Трансаэро<img src="images/transair.png"></li>
+                <li class="modal-Line">Боинг 737-300</li>
+                <li class="modal-Line">ДЕЛИ(ИНДИРА ГАНДИ ИНТ.)</li>
+                <li class="modal-Line">13:45
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Посадка закончена. Выход B08</li>
+                <li class="modal-Line">Совмещен с KL2879</li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="modalWindow11" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">УН 041</li>
+                <li class="modal-Line">Трансаэро<img src="images/transair.png"></li>
+                <li class="modal-Line">Боинг 737-300</li>
+                <li class="modal-Line">Горно-Алтайск</li>
+                <li class="modal-Line">13:50
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 13:44. Идёт выдача багажа.Лента А12</li>
+                <li class="modal-Line">-</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow12" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">УН 041</li>
+                <li class="modal-Line">Трансаэро<img src="images/transair.png"></li>
+                <li class="modal-Line">Боинг 737-300</li>
+                <li class="modal-Line">Санкт-Петербург (Пулково)</li>
+                <li class="modal-Line">13:50
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 13:39. Идёт выдача багажа.Лента А04</li>
+                <li class="modal-Line">-</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow13" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">ЮТ 373</li>
+                <li class="modal-Line">Ютейр<img src="images/Utair.jpg"></li>
+                <li class="modal-Line">Боинг 737-300</li>
+                <li class="modal-Line">Минеральные Воды</li>
+                <li class="modal-Line">13:50
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 13:49. Идёт выдача багажа.Лента А07</li>
+                <li class="modal-Line">-</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow14" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">ДР 232</li>
+                <li class="modal-Line">Победа<img src="images/pobeda.png"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Архангельск (Талаги)</li>
+                <li class="modal-Line">13:55
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 13:42. Идёт выдача багажа.Лента А13</li>
+                <li class="modal-Line">-</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow15" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">UN 555</li>
+                <li class="modal-Line">Трансаэро<img src="images/transair.png"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Париж (Орли)</li>
+                <li class="modal-Line">14:00
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Задержан до 16:20. Тех.причина</li>
+                <li class="modal-Line">Совмещен с KL2879</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow16" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">ДР 164</li>
+                <li class="modal-Line">Победа<img src="images/pobeda.png"></li>
+                <li class="modal-Line">Боинг 767-300</li>
+                <li class="modal-Line">Астрахань (Нариманово)</li>
+                <li class="modal-Line">14:05
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Прилетел в 14:10. Закончена выд. багажа на А08</li>
+                <li class="modal-Line">-</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow17" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">СУ 6128</li>
+                <li class="modal-Line">Аэрофлот<img src="images/airflot.gif"></li>
+                <li class="modal-Line">Аэробус А319</li>
+                <li class="modal-Line">Санкт-Петербург (Пулково)</li>
+                <li class="modal-Line">14:10
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Посадка закончена. Выход 29</li>
+                <li class="modal-Line">Совмещен с KL2881</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow18" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">УН 172</li>
+                <li class="modal-Line">Трансаэро<img src="images/transair.png"></li>
+                <li class="modal-Line">Боинг 737-400</li>
+                <li class="modal-Line">Новый Уренгой</li>
+                <li class="modal-Line">14:15
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Посадка закончена. Выход 13A</li>
+                <li class="modal-Line">Совмещен с KL2881</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow19" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">Р2 5819</li>
+                <li class="modal-Line">Оренбургские авиалинии<img src="images/orenair.png"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Симферополь (Интернэйшнл)</li>
+                <li class="modal-Line">14:50
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Регистрация закончена. Посадка с 14:20. Выход B08</li>
+                <li class="modal-Line">Совмещен с KL2881</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow20" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">Р2 5803</li>
+                <li class="modal-Line">Оренбургские авиалинии<img src="images/orenair.png"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Уфа</li>
+                <li class="modal-Line">14:40
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Идёт посадка. Окончание в 14:35. Выход 10A</li>
+                <li class="modal-Line">Совмещен с KL2881</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow21" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">Р2 5823</li>
+                <li class="modal-Line">Оренбургские авиалинии<img src="images/orenair.png"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Казань</li>
+                <li class="modal-Line">14:45
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Идёт посадка. Окончание в 14:40. Выход В02</li>
+                <li class="modal-Line">Совмещен с KL2881</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="modalWindow22" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+
+        <h2>Информация о рейсе</h2>
+        <!--<div style="background: #336B6B; width: 100%; height: 40px;"> <h2>Информация о рейсе</h2></div>-->
+        <div class="modal_Column">
+            <ul style="padding-left: 0px;">
+
+
+                <li class="modal-Line">Номер рейса</li>
+                <li class="modal-Line">Авиакомпания</li>
+                <li class="modal-Line">Тип воздушного судна</li>
+                <li class="modal-Line">Аэропорт назначения</li>
+                <li class="modal-Line">Плановое время</li>
+                <li class="modal-Line">Статус рейса</li>
+                <li class="modal-Line">Примечание</li>
+
+
+                <li class="modal-Line">Р2 5825</li>
+                <li class="modal-Line">Оренбургские авиалинии<img src="images/orenair.png"></li>
+                <li class="modal-Line">Боинг 737-800</li>
+                <li class="modal-Line">Новосибирск (Толмачево)</li>
+                <li class="modal-Line">14:45
+                    14.07.2015
+                </li>
+                <li class="modal-Line">Идёт посадка. Окончание в 14:40. Выход В06</li>
+                <li class="modal-Line">Совмещен с KL2881</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>
